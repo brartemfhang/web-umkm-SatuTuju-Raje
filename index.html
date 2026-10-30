@@ -1,0 +1,475 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Satutuju - Nikmatnya Selalu Satutuju</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cafeBlue: '#1d4ed8',
+                        cafeRed: '#dc2626',
+                        cafeWhite: '#ffffff'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="bg-white border-b-4 border-red-600 shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <div class="w-11 h-11 bg-blue-700 text-white rounded-full
+                                flex items-center justify-center font-bold text-xl
+                                border-4 border-red-600">
+                        S
+                    </div>
+
+                    <div>
+                        <h1 class="text-2xl font-extrabold text-blue-700">
+                            Cafe <span class="text-red-600">Satutuju</span>
+                        </h1>
+                        <p class="text-xs text-gray-500">
+                            Rasa yang bikin setuju
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Menu -->
+                <div class="hidden md:flex items-center gap-8 font-semibold">
+                    <a href="#home"
+                       class="text-blue-700 hover:text-red-600 transition">
+                        Home
+                    </a>
+
+                    <a href="#menu"
+                       class="text-gray-700 hover:text-red-600 transition">
+                        Menu Makanan
+                    </a>
+
+                    <a href="#tentang"
+                       class="text-gray-700 hover:text-red-600 transition">
+                        Tentang Kami
+                    </a>
+
+                    <a href="#kontak"
+                       class="text-gray-700 hover:text-red-600 transition">
+                        Kontak
+                    </a>
+                </div>
+
+                <!-- Login -->
+                <button
+                    class="bg-red-600 hover:bg-red-700 text-white
+                           px-5 py-2 rounded-lg font-bold transition shadow">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home"
+        class="relative overflow-hidden bg-blue-700 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-24 lg:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Hero Text -->
+                <div>
+                    <span class="inline-block bg-red-600 px-4 py-2 rounded-full
+                                 text-sm font-bold mb-6">
+                        ☕ Selamat Datang di Cafe Satutuju
+                    </span>
+
+                    <h2 class="text-5xl md:text-6xl font-extrabold
+                               leading-tight mb-6">
+                        Sekali Coba,
+                        <span class="text-red-400">Pasti Satutuju!</span>
+                    </h2>
+
+                    <p class="text-blue-100 text-lg md:text-xl
+                              leading-relaxed mb-8 max-w-xl">
+                        Nikmati berbagai makanan dan minuman pilihan dengan
+                        cita rasa istimewa. Tempat yang nyaman untuk nongkrong,
+                        ngobrol, bekerja, dan menikmati waktu bersama orang
+                        tersayang.
+                    </p>
+
+                    <!-- CTA -->
+                    <div class="flex flex-wrap gap-4">
+
+                        <a href="#menu"
+                           class="bg-red-600 hover:bg-red-700
+                                  text-white px-7 py-3 rounded-lg
+                                  font-bold transition shadow-lg">
+                            Lihat Menu
+                        </a>
+
+                        <a href="#kontak"
+                           class="bg-white hover:bg-gray-100
+                                  text-blue-700 px-7 py-3 rounded-lg
+                                  font-bold transition shadow-lg">
+                            Pesan Sekarang
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Hero Card -->
+                <div class="flex justify-center">
+                    <div class="bg-white rounded-3xl p-6 shadow-2xl
+                                max-w-md w-full rotate-1">
+
+                        <div class="bg-blue-50 rounded-2xl p-8 text-center">
+
+                            <div class="text-7xl mb-5">
+                                ☕🍔
+                            </div>
+
+                            <h3 class="text-3xl font-extrabold
+                                       text-blue-700 mb-3">
+                                Cafe Satutuju
+                            </h3>
+
+                            <p class="text-gray-600 mb-6">
+                                Makan enak, minum nikmat,
+                                suasana bersahabat.
+                            </p>
+
+                            <div class="border-t border-gray-200 pt-5">
+                                <p class="text-red-600 font-bold">
+                                    ★★★★★
+                                </p>
+                                <p class="text-sm text-gray-500">
+                                    Favorit pelanggan
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= MENU SECTION ================= -->
+    <section id="menu" class="bg-white py-20">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <span class="text-red-600 font-bold uppercase tracking-wider">
+                    Menu Favorit
+                </span>
+
+                <h2 class="text-4xl font-extrabold text-blue-700 mt-2">
+                    Menu Makanan & Minuman
+                </h2>
+
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+                    Pilihan menu terbaik Cafe Satutuju yang dibuat dengan
+                    bahan berkualitas dan rasa yang istimewa.
+                </p>
+            </div>
+
+
+            <!-- Menu Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Menu 1 -->
+                <div class="bg-white border-2 border-blue-100
+                            rounded-2xl overflow-hidden
+                            shadow hover:shadow-xl transition">
+
+                    <div class="bg-blue-100 h-40 flex items-center
+                                justify-center text-6xl">
+                        🍔
+                    </div>
+
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-blue-700">
+                            Satutuju Burger
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-2">
+                            Burger spesial dengan daging juicy dan saus khas.
+                        </p>
+
+                        <p class="text-red-600 font-bold text-lg mt-4">
+                            Rp 28.000
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Menu 2 -->
+                <div class="bg-white border-2 border-blue-100
+                            rounded-2xl overflow-hidden
+                            shadow hover:shadow-xl transition">
+
+                    <div class="bg-red-50 h-40 flex items-center
+                                justify-center text-6xl">
+                        🍝
+                    </div>
+
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-blue-700">
+                            Pasta Satutuju
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-2">
+                            Pasta creamy dengan topping pilihan yang lezat.
+                        </p>
+
+                        <p class="text-red-600 font-bold text-lg mt-4">
+                            Rp 32.000
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Menu 3 -->
+                <div class="bg-white border-2 border-blue-100
+                            rounded-2xl overflow-hidden
+                            shadow hover:shadow-xl transition">
+
+                    <div class="bg-blue-100 h-40 flex items-center
+                                justify-center text-6xl">
+                        🍗
+                    </div>
+
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-blue-700">
+                            Chicken Crispy
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-2">
+                            Ayam crispy renyah dengan bumbu spesial.
+                        </p>
+
+                        <p class="text-red-600 font-bold text-lg mt-4">
+                            Rp 25.000
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Menu 4 -->
+                <div class="bg-white border-2 border-blue-100
+                            rounded-2xl overflow-hidden
+                            shadow hover:shadow-xl transition">
+
+                    <div class="bg-red-50 h-40 flex items-center
+                                justify-center text-6xl">
+                        🥤
+                    </div>
+
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-blue-700">
+                            Es Kopi Satutuju
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-2">
+                            Kopi susu creamy dengan rasa yang pas.
+                        </p>
+
+                        <p class="text-red-600 font-bold text-lg mt-4">
+                            Rp 18.000
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="tentang" class="bg-blue-50 py-20">
+
+        <div class="max-w-5xl mx-auto px-6 text-center">
+
+            <span class="text-red-600 font-bold">
+                TENTANG CAFE SATUTUJU
+            </span>
+
+            <h2 class="text-4xl font-extrabold text-blue-700 mt-3 mb-6">
+                Tempat Berkumpul, Tempat Berbagi Cerita
+            </h2>
+
+            <p class="text-gray-600 text-lg leading-relaxed">
+                Cafe Satutuju hadir sebagai tempat nyaman untuk menikmati
+                makanan dan minuman berkualitas dengan harga bersahabat.
+                Kami percaya bahwa makanan yang enak akan terasa lebih
+                istimewa ketika dinikmati bersama orang-orang tercinta.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+    <section class="bg-red-600 text-white py-16">
+
+        <div class="max-w-5xl mx-auto px-6 text-center">
+
+            <h2 class="text-4xl font-extrabold mb-4">
+                Sudah Siap Nongkrong di Satutuju?
+            </h2>
+
+            <p class="text-red-100 mb-8 text-lg">
+                Ajak temanmu dan nikmati makanan favoritmu hari ini!
+            </p>
+
+            <a href="#kontak"
+               class="inline-block bg-white text-red-600
+                      hover:bg-gray-100 px-8 py-3 rounded-lg
+                      font-bold shadow-lg transition">
+                Pesan Sekarang
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="kontak" class="bg-white py-16">
+
+        <div class="max-w-4xl mx-auto px-6 text-center">
+
+            <h2 class="text-3xl font-extrabold text-blue-700 mb-4">
+                Hubungi Kami
+            </h2>
+
+            <p class="text-gray-500 mb-6">
+                Ingin reservasi atau melakukan pemesanan?
+                Hubungi Cafe Satutuju sekarang.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+
+                <a href="https://wa.me/6281234567890"
+                   class="bg-green-500 hover:bg-green-600
+                          text-white px-6 py-3 rounded-lg
+                          font-bold transition">
+                    WhatsApp
+                </a>
+
+                <a href="mailto:info@cafesatutuju.com"
+                   class="bg-blue-700 hover:bg-blue-800
+                          text-white px-6 py-3 rounded-lg
+                          font-bold transition">
+                    Email Kami
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-blue-900 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-10">
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Brand -->
+                <div>
+                    <h2 class="text-2xl font-extrabold">
+                        Cafe <span class="text-red-400">Satutuju</span>
+                    </h2>
+
+                    <p class="text-blue-200 mt-3">
+                        Rasa yang bikin setuju.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-3">
+                        Navigasi
+                    </h3>
+
+                    <ul class="space-y-2 text-blue-200">
+                        <li>
+                            <a href="#home" class="hover:text-white">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#menu" class="hover:text-white">
+                                Menu Makanan
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#tentang" class="hover:text-white">
+                                Tentang Kami
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#kontak" class="hover:text-white">
+                                Kontak
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-bold text-lg mb-3">
+                        Kontak
+                    </h3>
+
+                    <p class="text-blue-200">
+                        📍 Jl. Satutuju No. 10
+                    </p>
+
+                    <p class="text-blue-200 mt-2">
+                        ☎ 0812-3456-7890
+                    </p>
+
+                    <p class="text-blue-200 mt-2">
+                        ✉ info@cafesatutuju.com
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-blue-700 mt-8 pt-6 text-center">
+                <p class="text-blue-300 text-sm">
+                    © 2026 Cafe Satutuju. All Rights Reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
+```
